@@ -27,24 +27,27 @@ def display_methodology():
         The app is created with Python and Streamlit, a robust framework for developing online apps. The codebase is divided into sections matching to various functionalities. The app's pages, including "About Us," "Policy Explainer," and "Resale HDB Simulator," are coded as distinct functions. Streamlit's sidebar allows users to move between various areas. The app includes Matplotlib for data visualization, enabling dynamic production of bar charts, comparisons, and tables. The app also has error handling techniques, which ensure that missing files (such as CSV files) are recognized and sensible error messages are presented.
     """)
 
-    # Displaying flowchart for Resale HDB Simulator
-st.subheader("Flowchart for Resale HDB Simulator")
-simulator_flowchart_path = "resale_hdb_simulator_flowchart.png"
-if os.path.exists(simulator_flowchart_path):
-    img_simulator = Image.open(simulator_flowchart_path)
-    st.image(img_simulator, caption="Flowchart for Resale HDB Simulator", use_column_width=True)
-else:
-    st.error(f"The file '{simulator_flowchart_path}' was not found. Please ensure the file is in the correct location.")
+    # Defining the file paths for the flowcharts
+    simulator_flowchart_path = "resale_hdb_simulator_flowchart.png"
+    policy_explainer_flowchart_path = "resale_hdb_policy_explainer_flowchart.png"
 
-# Displaying flowchart for HDB Policy Explainer
-st.subheader("Flowchart for HDB Policy Explainer")
-policy_explainer_flowchart_path = "resale_hdb_policy_explainer_flowchart.png"
-if os.path.exists(policy_explainer_flowchart_path):
-    img_policy_explainer = Image.open(policy_explainer_flowchart_path)
-    st.image(img_policy_explainer, caption="Flowchart for HDB Policy Explainer", use_column_width=True)
-else:
-    st.error(
-        f"The file '{policy_explainer_flowchart_path}' was not found. Please ensure the file is in the correct location.")
+    # Showing the "Resale HDB Simulator" flowchart
+    st.subheader("Flowchart for Resale HDB Simulator")
+    if os.path.exists(simulator_flowchart_path):
+        img_simulator = Image.open(simulator_flowchart_path)
+        st.image(img_simulator, caption="Flowchart for Resale HDB Simulator", use_column_width=True)
+    else:
+        st.error(
+            f"The file '{simulator_flowchart_path}' was not found. Please ensure the file is in the correct location.")
+
+    # Showing the "Resale HDB Policy Explainer" flowchart
+    st.subheader("Flowchart for Resale HDB Policy Explainer")
+    if os.path.exists(policy_explainer_flowchart_path):
+        img_policy_explainer = Image.open(policy_explainer_flowchart_path)
+        st.image(img_policy_explainer, caption="Flowchart for Resale HDB Policy Explainer", use_column_width=True)
+    else:
+        st.error(
+            f"The file '{policy_explainer_flowchart_path}' was not found. Please ensure the file is in the correct location.")
 
 # Calling the function to run the methodology section
 display_methodology()
