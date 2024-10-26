@@ -28,10 +28,10 @@ def display_methodology():
     """)
 
 # Defining the file paths for the flowcharts
-simulator_flowchart_path = r"C:\Users\danie\Desktop\HDB_Resale_App\resale_hdb_simulator_flowchart.png"
-policy_explainer_flowchart_path = r"C:\Users\danie\Desktop\HDB_Resale_App\resale_hdb_policy_explainer_flowchart.png"
+simulator_flowchart_path = "resale_hdb_simulator_flowchart.png"
+policy_explainer_flowchart_path = "resale_hdb_policy_explainer_flowchart.png"
 
-# Showing the "Resale HDB Simulator" flowchart
+# Displaying the "Resale HDB Simulator" flowchart
 st.subheader("Flowchart for Resale HDB Simulator")
 if os.path.exists(simulator_flowchart_path):
     img_simulator = Image.open(simulator_flowchart_path)
@@ -39,7 +39,7 @@ if os.path.exists(simulator_flowchart_path):
 else:
     st.error(f"The file '{simulator_flowchart_path}' was not found. Please ensure the file is in the correct location.")
 
-# Showing the "Resale HDB Policy Explainer" flowchart
+# Displaying the "Resale HDB Policy Explainer" flowchart
 st.subheader("Flowchart for Resale HDB Policy Explainer")
 if os.path.exists(policy_explainer_flowchart_path):
     img_policy_explainer = Image.open(policy_explainer_flowchart_path)
