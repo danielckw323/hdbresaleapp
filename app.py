@@ -3,7 +3,7 @@ from home import home
 from resale_simulator import resale_simulator
 from policy_explainer import policy_explainer
 from about_us import about_us
-from hdb_methodology import hdb_methodology
+from hdb_methodology import display_methodology
 
 # Defining the password
 PASSWORD = "aibootcamp"
@@ -49,7 +49,7 @@ if st.session_state.authenticated:
     elif page == "About Us":
         about_us()
     elif page == "Methodology":
-        hdb_methodology()
+        display_methodology()
 else:
     st.write("Please enter the password in the sidebar to access the app.")
 
