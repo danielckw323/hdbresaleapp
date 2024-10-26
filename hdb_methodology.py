@@ -28,8 +28,8 @@ def display_methodology():
     """)
 
     # Defining the file paths for the flowcharts
-    simulator_flowchart_path = "resale_hdb_simulator_flowchart.png"
-    policy_explainer_flowchart_path = "resale_hdb_policy_explainer_flowchart.png"
+    simulator_flowchart_path = r"C:\Users\danie\Desktop\HDB_Resale_App\resale_hdb_simulator_flowchart.png"
+    policy_explainer_flowchart_path = r"C:\Users\danie\Desktop\HDB_Resale_App\resale_hdb_policy_explainer_flowchart.png"
 
     # Showing the "Resale HDB Simulator" flowchart
     st.subheader("Flowchart for Resale HDB Simulator")
