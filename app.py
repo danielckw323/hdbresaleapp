@@ -17,16 +17,24 @@ page = st.sidebar.radio(
 )
 
 # Page routing
-if page == "Home":
-    home()
-elif page == "Resale HDB Simulator":
-    resale_simulator()
-elif page == "HDB Policy Explainer":
-    policy_explainer()
-elif page == "About Us":
-    about_us()
-elif page == "Methodology":
-    display_methodology()
+try:
+    if page == "Home":
+        st.write("Loading Home page...")  # Debug statement
+        home()
+    elif page == "Resale HDB Simulator":
+        st.write("Loading Resale HDB Simulator...")  # Debug statement
+        resale_simulator()
+    elif page == "HDB Policy Explainer":
+        st.write("Loading HDB Policy Explainer...")  # Debug statement
+        policy_explainer()
+    elif page == "About Us":
+        st.write("Loading About Us...")  # Debug statement
+        about_us()
+    elif page == "Methodology":
+        st.write("Loading Methodology...")  # Debug statement
+        display_methodology()
+except Exception as e:
+    st.error(f"An error occurred: {e}")
 
 
 
