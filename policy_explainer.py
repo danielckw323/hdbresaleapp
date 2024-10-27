@@ -36,19 +36,20 @@ def policy_explainer():
     st.write(f"**Housing Loan**: {loan_type}")
     st.write(f"**Preferred Housing Type**: {housing_type}")
 
-    # The following is the section for First-Time HDB Buyers
-    st.subheader("For First-Time HDB Buyers")
-    st.write(
-        "If you are a first-time HDB buyer, visit the [HDB First-Time Homebuyers' Guide](https://www.hdb.gov.sg/cs/infoweb/about-us/news-and-publications/publications/hdbspeaks/Helping-First-time-Homebuyers-Afford-a-Resale-Flat) "
-        "for more information about the schemes and grants available to help you afford a resale flat."
-    )
-
-    # The following is the section for Non-First-Time HDB Buyers
-    st.subheader("For Non-First-Time HDB Buyers")
-    st.write(
-        "If you are a non-first-time HDB buyer, you can visit the [HDB Fresh Start Housing Scheme](https://www.hdb.gov.sg/residential/buying-a-flat/buying-procedure-for-new-flats/application/fresh-start-housing-scheme) "
-        "for details on the options available to you."
-    )
+    # Recommendation Feature
+    st.subheader("Recommendation")
+    if buyer_type == "First-Time Buyer":
+        st.write(
+            "As a **First-Time Buyer**, you may want to refer to the "
+            "[HDB First-Time Home Buyers' Guide](https://www.hdb.gov.sg/cs/infoweb/about-us/news-and-publications/publications/hdbspeaks/Helping-First-time-Homebuyers-Afford-a-Resale-Flat) "
+            "for more information about available schemes and grants."
+        )
+    elif buyer_type == "Second-Time Buyer":
+        st.write(
+            "As a **Second-Time Buyer**, you may want to refer to the "
+            "[HDB Fresh Start Housing Scheme](https://www.hdb.gov.sg/residential/buying-a-flat/buying-procedure-for-new-flats/application/fresh-start-housing-scheme) "
+            "to explore options available for you."
+        )
 
 # Calling the function to run the explainer
 policy_explainer()
