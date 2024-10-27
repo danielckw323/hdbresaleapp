@@ -4,6 +4,16 @@ import pandas as pd
 def home():
     st.title("Resale HDB Statistics")
 
+    st.write("""
+    The statistics provide the median prices for resale transactions of a particular flat type in a given town.
+    This is based on resale cases registered in the quarter. The median price (at fiftieth percentile) tells you 
+    that half of the flats transacted during the quarter were sold above the median price and half were sold below the median price.
+
+    The median resale prices are inclusive of Cash-Over-Valuation (COV) for transactions where resale prices are above market valuations.
+
+    For more information about HDB resale data, you can visit the [Resale Statistics](https://www.hdb.gov.sg/cs/infoweb/residential/buying-a-flat/resale/resale-statistics) page.
+    """)
+
     # Loading the CSV data
     try:
         # Ensuring the path to the CSV file is right
