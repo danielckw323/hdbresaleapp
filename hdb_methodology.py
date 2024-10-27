@@ -49,5 +49,3 @@ def display_methodology():
         st.error(
             f"The file '{policy_explainer_flowchart_path}' was not found. Please ensure the file is in the correct location.")
 
-# Calling the function to run the methodology section
-display_methodology()
